@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+main{
+    margin: 50px 20% 50px 20%;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(52, 59, 59);
+    padding: 20px;
+}
+
+table,th,tr,td{
+    border: 2px;
+    border-style: ridge;
+}
+
+#form-view{
+    display: none;
+}
+
+form label{
+    padding-top: 15px;
+    padding-bottom: 5px;
+    display: block;
+}
+

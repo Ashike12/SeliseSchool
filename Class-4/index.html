@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="design.css">
+    <title>Document</title>
+</head>
+<body onload="onInit()">
+    <main>
+        <section>
+            <div>
+                <h1>Table View</h1>
+                <button onclick="ShowForm('Add')">Add New</button>
+                <table id='studnetTable' onfocusout="UpdateTableOnFocusOut()">
+                    
+                </table>
+            </div>
+        </section>
+        <section>
+            <div id="form-view">
+               <h1>Form View</h1>
+               <form>
+                   <fieldset id="studentForm">
+                       <legend>Student Information</legend>
+                   </fieldset>
+                   
+               </form>
+               <button id="UpdatData">Update</button>
+               <button id="AddData" onclick="SaveTable()">Save</button>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>    
+</body>
+</html>

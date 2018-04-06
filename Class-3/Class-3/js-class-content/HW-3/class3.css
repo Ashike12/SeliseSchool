@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;    
+}
+h1{
+    font-size: 30px;
+}
+.col{
+    float: left;
+    width: 100%;
+}
+.col.three{
+    width: 33%;
+}
+.col.six{
+    width: 16%;
+}
+table,th,td{
+    border: 1px;
+    border-color: black;
+    padding: 5px;
+    margin: 2px;
+    border-style: ridge;
+}

@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+}
+
+.padding-15{
+    padding: 15px 10% 25px 10%;
+}
+.formstyle{
+    padding: 15px;
+}
+.col{
+    float: left;
+    width: 100%;
+}
+.col.two{
+    width: 50%;
+}
+.col.three{
+    padding-top: 8px;
+    width: 33%;
+}
+.col.six{
+    width: 16%;
+}
+
+input{
+    margin-top: 6px;
+    margin-bottom: 8px;
+}

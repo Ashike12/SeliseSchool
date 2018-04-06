@@ -1,0 +1,152 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 16px;
+}
+h4{
+    font-size: 13px;
+}
+p{
+    font-size: 14px;
+}
+p.lg-1{
+    font-size: 18px;
+}
+p.sm-1{
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding-left: 5%;
+}
+/*.row{
+    width: 100%;
+    float: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}*/
+.row{
+    float: left;
+    width: 100%;
+}
+.row.head-section{
+    padding-bottom: 20px;
+}
+.row.landing-page{
+    background-color: rgb(58, 189, 117);
+    color: white;
+    padding-bottom: 35px;
+    padding-top: 50px;
+}
+.row.clean-and-simple{
+    text-align: center;
+    padding-bottom: 35px;
+}
+.row.footer{
+    padding-top: 30px;
+    text-align: center;
+    background-color: rgb(130, 130, 228)
+}
+.col{
+    float: left;
+    width: 100%;
+}
+
+.col.two{
+    width: 50%;
+}
+
+.col.three{
+    width: 33%;
+}
+
+.col.four{
+    width: 25%;
+}
+
+.col.five{
+    width: 20%;
+}
+
+.col.three-fourth{
+    
+    width: 75%;
+}
+
+.inline-header{
+    float: left;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.inline-paragraph{
+    float: left;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+.fa.fa-car.left{
+    float: left;
+    padding-top: 2px;
+}
+.row.landing-page .col.two:nth-child(2){
+    position: relative;
+    
+}
+.image-absolute{
+    position: absolute;
+    width: 100%;
+    padding-top: 3px;
+    height: 230px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    opacity: 0.35;
+}
+
+.col.three.buy-now{
+    padding: 8px 15px 8px 15px;
+    margin: 2px 2px 2px 2px;
+    border: 3px;
+    border-color: black;
+    border-radius: 2%;
+    background-color: white;
+    color: green;
+
+}
+.col.three.learn-more{
+    padding: 8px 15px 8px 15px;
+}
+ .row.clean-and-simple p:first-child{
+    padding: 20px 90px 5px 90px;
+ }
+ .row.clean-and-simple p:nth-child(2){
+    padding: 0px 125px 10px 125px;
+ }
+ .row.clean-and-simple button{
+    background-color: rgb(42, 42, 221);
+    color: white;
+    padding: 5px 5px 5px 5px;
+ }
+.material-icons.footer{
+    font-size: 60px;
+}
+.row.footer .col-four p,p.sm-1{
+    padding-right: 10px;
+    padding-left: 10px;
+}
