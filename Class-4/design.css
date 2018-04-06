@@ -19,6 +19,10 @@ table,th,tr,td{
     border-style: ridge;
 }
 
+form {
+    padding-bottom: 15px;
+}
+
 #form-view{
     display: none;
 }
