@@ -7,12 +7,14 @@ if(localStorage.getItem("Data")!==null){
         {
             "Name": "ksadjfk",
             "Roll": "123421",
-            "Department": "sadf"
+            "Department": "sadf",
+            "Email": "sdhj.ds@gh.com"
         },
         {
             "Name": "ksafdsffdjfk",
-            "Roll": "1234df21",
-            "Department": "dsff"
+            "Roll": "123421",
+            "Department": "dsff",
+            "Email": "nhgg.jgh@gmail.com"
         }
     ];
     localStorage.setItem("Data",JSON.stringify(data));
@@ -89,25 +91,36 @@ class TABLE{
         
         var Table = document.getElementById(TableId);
         var RowLength = Table.rows.length;
-        var NameOfCell = Object.keys(data[0]);
+        var NameOfCell = Object.keys(data[0]);        
         for(var i=1;i<RowLength;i++){
             var Cell = Table.rows.item(i).cells;
             var CellLength = Cell.length;
+            var DisableButtonIfInvalidInputExist = document.getElementById(i-1);
             for(var j=0;j<CellLength-1;j++){
                 var CellValue = Cell.item(j).innerHTML;
                 if(CellValue==""){
                     ShowAlert(NameOfCell[j]+" can't be empty");
+                    DisableButtonIfInvalidInputExist.disabled = true;
                     return;
                 }
                 else if(NameOfCell[j]=="Roll"){
-                    if(!checkValidRoll(CellValue))
-                         return;
+                    if(!checkValidRoll(CellValue)){
+                        DisableButtonIfInvalidInputExist.disabled = true;
+                        return;
+                    }
+                }
+                else if(NameOfCell[j]=="Email"){
+                    if(!checkValidEmail(CellValue)){
+                        DisableButtonIfInvalidInputExist.disabled = true;
+                        return;
+                    }
                 }
             }
         }
         for(var i=1;i<RowLength;i++){
             var Cell = Table.rows.item(i).cells;
             var CellLength = Cell.length;
+            var DisableButtonIfInvalidInputExist = document.getElementById(i-1);
             for(var j=0;j<CellLength-1;j++){
                 var CellValue = Cell.item(j).innerHTML;
                 var CellId = 'cell'+(i-1)+j;
@@ -116,6 +129,7 @@ class TABLE{
                 //console.log(CellValue);
                 data[i-1][NameOfCell[j]] = CellValue;
             }
+            DisableButtonIfInvalidInputExist.disabled = false;
         }
         localStorage.setItem("Data",JSON.stringify(data));
     }
@@ -171,8 +185,12 @@ function UpdateTable(RowNo){
          if(FormId=="Roll"){
              if(checkValidRoll(UserInput)==false){
                  return;
-             }
+             }             
          }
+         else if(FormId=="Email"){
+            if(!checkValidEmail(UserInput))
+                 return;
+        }
         
         document.getElementById(TableCellId).textContent = UserInput;
         
@@ -200,6 +218,24 @@ function ShowAlert(message){
     alert(message);
 }
 
+function checkValidEmail(email){
+    var InvalidMessage = 'Please enter valid email';
+    if(email.search(' ')!=-1){
+        ShowAlert(InvalidMessage);
+        return;
+    }
+    if(email.search('@')>0){
+        var DotAfterAt = email.search('@');
+        for(;DotAfterAt<email.length-1;DotAfterAt++){
+            if(email[DotAfterAt]=='.'){
+                return true;
+            }
+        }
+    }
+    ShowAlert(InvalidMessage);
+    return false;
+}
+
 function checkValidRoll(roll){
     var len = roll.length;
     for(var i=0;i<len;i++){
@@ -224,6 +260,10 @@ function SaveTable(){
                 if(checkValidRoll(UserInput)==false){
                     return;
                 }
+            }
+            else if(NoOfInputs[i]=="Email"){
+                if(!checkValidEmail(UserInput))
+                     return;
             }
         }else{
             ShowAlert(NoOfInputs[i]+" Can't be empty");
