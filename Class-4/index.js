@@ -296,8 +296,8 @@ function ShowForm(SwitchButton,RowNo){
         var NameOfCell = Object.keys(data[0]);
         //console.log(NameOfCell);
         for(var i=0;i<NameOfCell.length;i++){
-            //console.log(document.getElementById(NameOfCell[i]).value);
-            document.getElementById(NameOfCell[i]).value=="";               
+            console.log(document.getElementById(NameOfCell[i]).value);
+            document.getElementById(NameOfCell[i]).value="";               
         }
     }
     else{

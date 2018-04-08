@@ -4,6 +4,10 @@ body{
     border: 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
+    background-image: url('3.jpg');
+    background-attachment: fixed;
+    background-repeat: inherit;
+    background-size: 100%;
 }
 
 main{
@@ -14,13 +18,19 @@ main{
     padding: 20px;
 }
 
+table{
+    background-color: rgb(162, 168, 167);
+}
+
 table,th,tr,td{
     border: 2px;
     border-style: ridge;
+    text-align: center;
 }
 
 form {
     padding-bottom: 15px;
+    background-color: rgb(162, 168, 167);
 }
 
 #form-view{
