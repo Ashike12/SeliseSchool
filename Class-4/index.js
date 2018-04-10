@@ -59,7 +59,7 @@ class TABLE{
             CreateCell.textContent = TableData[RowNo][CellInfo[i]];
             CreateCell.setAttribute("contenteditable", "true");
             var IdOfCurrentCell = "cell"+RowNo+i;
-            console.log(IdOfCurrentCell);
+            //console.log(IdOfCurrentCell);
             CreateCell.setAttribute("id",IdOfCurrentCell);
             CreateTableRow.appendChild(CreateCell);
         }
@@ -147,6 +147,7 @@ class FORM{
             var CreateInput = document.createElement('input');
             CreateLabel.textContent = LabelInfo[i];
             CreateInput.setAttribute("id", LabelInfo[i]);
+            CreateInput.setAttribute("placeholder", "Your "+LabelInfo[i]+"....");
             Form.appendChild(CreateLabel);
             Form.appendChild(CreateInput);
         }
