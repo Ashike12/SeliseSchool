@@ -4,7 +4,6 @@ body{
     border: 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
-    background-image: url('3.jpg');
     background-attachment: fixed;
     background-repeat: inherit;
     background-size: 100%;
@@ -17,6 +16,10 @@ main{
     border-color: rgb(52, 59, 59);
     padding: 20px;
 }
+
+/* h1,h2,h3,h4 {
+    text-align: center;
+} */
 
 table{
     background-color: rgb(162, 168, 167);
